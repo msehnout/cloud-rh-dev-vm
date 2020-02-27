@@ -16,9 +16,11 @@
       - 'fd-find'
       - 'ripgrep'
       - 'tree'
+      - 'nc'
       # For macOS
       - 'virtualbox-guest-additions'
       # Specific to this project
       - 'npm'
       - 'python2'
+      - 'podman'
     state: present

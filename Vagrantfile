@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "fedora/31-cloud-base"
   config.vm.box_version = "31.20191023.0"
   config.vm.network "forwarded_port", guest: 9090, host: 9090, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 8002, host: 8002, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 1337, host: 1337, host_ip: "127.0.0.1"
 
   # Provider-specific configuration
   if OS.mac?
@@ -49,6 +51,7 @@ Vagrant.configure("2") do |config|
     ["insights-frontend-starter-app/", "/home/vagrant/insights-frontend-starter-app"],
     ["insights-proxy/", "/home/vagrant/insights-proxy"],
     ["spandx/", "/home/vagrant/spandx"],
+    ["starter-app-test/", "/home/vagrant/starter-app-test"],
   ]
 
   # This does not work by default, see README for workaround
